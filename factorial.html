@@ -1,0 +1,40 @@
+<html>
+
+    <head>
+        
+    </head>
+
+    <body>
+        <div>
+            <p id="string_show"></p>
+            <input type="text" name="fact" id="fact">
+            <button type="button" 
+                    onclick="document.getElementById('fact_show').innerHTML = factorial(document.getElementById('fact').value)">
+                    Get Factorial
+            </button>
+            <p id="fact_show"></p>
+        </div>
+
+
+
+
+        <script>
+            
+            function factorial(n)
+            {
+                if(n == 0)
+                    return 1;
+                else
+                {
+                    return factorial(n - 1) * n;
+                }
+            }
+
+            document.getElementById("string_show").innerHTML = `Half of 100 is ${100 / 2}`;
+
+        </script>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,38 @@
+<html>
+
+    <head>
+        
+    </head>
+
+    <body>
+        <div>
+            <input type="text" name="string" id="string">
+            <button type="button" 
+                    onclick="document.getElementById('totalCode').innerHTML = unicodeCount(document.getElementById('string').value)">
+                    Get Total Unicode
+            </button>
+            <p id="totalCode"></p>
+        </div>
+
+
+
+
+        <script>
+            
+            function unicodeCount(str)
+            {
+                var sum = 0;
+                var i;
+                for(i = 0; i < str.length; i++)
+                {
+                    sum = sum + str.charCodeAt(i);
+                }
+                return sum;
+            }
+
+        </script>
+
+
+    </body>
+
+</html>
