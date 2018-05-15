@@ -1,0 +1,55 @@
+<html>
+
+    <head>
+        
+    </head>
+
+    <body>
+        <div>
+            <p>Open console log</p>
+            <button type="button" 
+                    onclick="journalEvents()">
+                    Get Array From Object
+            </button>
+        </div>
+
+
+
+
+        <script>
+
+            let journal = [
+
+                {events: ["work", "touched tree", "pizza",
+                "running", "television"],
+                squirrel: false},
+
+                {events: ["work", "ice cream", "cauliflower",
+                "lasagna", "touched tree", "brushed teeth"],
+                squirrel: false},
+
+                {events: ["weekend", "cycling", "break", "peanuts",
+                "beer"],
+                squirrel: true},
+                /* and so on... */
+            ];
+            console.log(journal);
+            
+            function journalEvents() {
+                let events = [];
+                for (let entry of journal) {
+                    for (let event of entry.events) {
+                        if (!events.includes(event)) {
+                            events.push(event);
+                        }
+                    }
+                }
+                console.log(events);
+            }
+
+        </script>
+
+
+    </body>
+
+</html>
